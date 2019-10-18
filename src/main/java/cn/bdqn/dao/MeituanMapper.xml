@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.dao.MeituanMapper">
+    <resultMap  type="Seller_goods" id="getGoods">
+        <id property="sellerId" column="sellerId"/>
+        <result property="sellerName" column="sellerName"/>
+        <result property="sellerPhone" column="sellerPhone"/>
+        <result property="sellerAddress" column="sellerAddress"/>
+        <result property="goodPivpsth" column="goodPivpsth"/>
+        <collection property="goods" ofType="Goods">
+           <id property="goodsId" column="goodsId"/>
+           <result property="sellerId" column="sellerId"/>
+           <result property="goodsName" column="goodsName"/>
+           <result property="goodsprice" column="goodsprice"/>
+           <result property="goodsDescription" column="goodsDescription"/>
+           <result property="goodsJpg" column="goodsJpg"/>
+        </collection>
+    </resultMap>
+    <select id="getSeller_goods" resultMap="getGoods">
+         SELECT * FROM seller_goods AS a INNER JOIN goods AS b ON a.`sellerId`=b.`sellerId` LIMIT 6
+    </select>
+    <select id="getGoodsAndId" resultMap="getGoods">
+       SELECT * FROM seller_goods AS a INNER JOIN goods AS b ON a.`sellerId`=b.`sellerId` WHERE a.`sellerId`=#{sellerId}
+    </select>
+    <select id="getSeller" resultType="Seller_goods">
+        select * from seller_goods where sellerId=#{sellerId}
+    </select>
+    <select id="getGoodsAndSellerId" resultType="Goods">
+        select * from goods where sellerId=#{sellerId} LIMIT 1
+    </select>
+    <insert id="addOrder" parameterType="Order_goods">
+        insert into  values(null,#{userId},#{sellerId},#{dateOfOrder},#{sendToTime},#{statu})
+    </insert>
+</mapper>

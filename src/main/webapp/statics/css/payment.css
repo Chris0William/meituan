@@ -1,0 +1,284 @@
+.input-number {
+    display: inline-block;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px
+}
+
+.input-number button, .input-number input {
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    border: none;
+    outline: 0
+}
+
+.input-number button {
+    position: relative;
+    box-sizing: content-box;
+    font-size: 0;
+    outline: 0;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: top
+}
+
+.bd .tip, .input-number input {
+    font-size: 14px;
+    text-align: center
+}
+
+.input-number button:disabled:before {
+    background-color: #E2E2E2
+}
+
+.input-number button:disabled:after {
+    background-color: #E2E2E2
+}
+
+.input-number .minus-btn:before, .input-number .plus-btn:after, .input-number .plus-btn:before {
+    content: "";
+    position: absolute;
+    background-color: #666;
+    display: inline-block
+}
+
+.input-number .minus-btn:before, .input-number .plus-btn:before {
+    top: 16px;
+    left: 10px;
+    width: 28px;
+    height: 3px;
+    transform: scale(.5);
+    transform-origin: left top;
+    transition: background .6s ease
+}
+
+.input-number .plus-btn:after {
+    top: 10px;
+    left: 16px;
+    width: 3px;
+    height: 28px;
+    transform: scale(.5);
+    transform-origin: left top
+}
+
+.input-number input {
+    color: #222;
+    border: 1px solid #E5E5E5;
+    border-top: none;
+    border-bottom: none;
+    vertical-align: top
+}
+
+.bd .tip .tip-icon, .bd .tip span {
+    vertical-align: middle
+}
+
+.bd {
+    width: 980px;
+    margin: 10px auto 0;
+    padding: 10px 0 65px
+}
+
+.bd .tip {
+    margin: 10px auto;
+    padding: 10px 30px;
+    border: 1px solid #f5d8a7;
+    background-color: #fff6db;
+    color: #666;
+    line-height: 17px
+}
+
+.bd .tip .tip-icon {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    overflow: hidden;
+    background-position: 0 -86px;
+    font-size: 0
+}
+
+.bd .tip .tip-close {
+    float: right;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 4px;
+    width: 13px;
+    height: 13px;
+    background-position: 0 -106px;
+    border: none;
+    font-size: 0;
+    outline: 0
+}
+
+.bd table {
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.bd table tr th {
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F7F7F7
+}
+
+.bd table tr .desc {
+    width: 500px;
+    text-align: left
+}
+
+.bd table tr .unit-price {
+    width: 100px
+}
+
+.bd table tr .num {
+    width: 180px
+}
+
+.bd table tr .total-price {
+    text-align: right
+}
+
+.bd table tr td {
+    padding: 12px 16px;
+    color: #666
+}
+
+.bd table tr td a {
+    text-decoration: none;
+    color: #666;
+    cursor: pointer
+}
+
+.bd table tr td a:hover {
+    text-decoration: underline
+}
+
+.bd table tr td:first-child {
+    text-align: left
+}
+
+.bd table tr td:last-child {
+    color: #f76120;
+    text-align: right
+}
+
+.bd .row {
+    padding: 12px;
+    border-top: 1px solid #E5E5E5;
+    text-align: right
+}
+
+.bd .row .total-price {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #666;
+    line-height: 30px
+}
+
+.bd .row .total-price i {
+    font-style: normal;
+    font-weight: 400
+}
+
+.bd .row .total-price span {
+    font-size: 20px;
+    color: #f76120
+}
+
+.bd .row.discount {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #666
+}
+
+.bd .row.discount .discount-row {
+    margin-bottom: 10px;
+    overflow: hidden
+}
+
+.bd .row.discount .discount-row label {
+    padding-left: 20px;
+    }
+
+
+.bd .row.discount .discount-row .discount-price {
+    display: inline-block;
+    width: 60px
+}
+
+.bd .row.discount .discount-row .discount-choices {
+    float: right;
+    padding: 15px 15px 20px;
+    margin: 10px 0 6px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    list-style: none;
+    text-align: left;
+    font-size: 12px;
+    color: #333
+}
+
+.bd .row.discount .discount-row .discount-choices li {
+    margin-bottom: 6px
+}
+
+.bd .row.discount .discount-row .discount-choices li .point {
+    display: inline-block;
+    width: 96px
+}
+
+.bd .row.discount .discount-row .discount-choices li .voucher-dis {
+    color: #f76120
+}
+
+.bd .row.discount .discount-row .discount-choices li .voucher-desc {
+    color: #999
+}
+
+.bd .row.discount .discount-row .discount-choices .discount-tip {
+    color: #999;
+    margin: 10px 0 0;
+    width: 320px
+}
+
+.bd .row.mobile-info {
+    text-align: left;
+    font-size: 12px
+}
+
+.bd .row.mobile-info a {
+    color: #2bb8aa;
+    text-decoration: none
+}
+
+.bd .form-submit {
+    text-align: right
+}
+
+.bd .form-submit .btn {
+    display: inline-block;
+    padding: 5px 20px 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #2db3a6;
+    background-image: linear-gradient(to bottom, #2ec3b4, #2db3a6);
+    border-width: 0 0 1px;
+    border-color: #008177;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: 2px
+}
+
+.bd .form-submit .btn:hover {
+    background-image: linear-gradient(to bottom, #2bb8aa, #2eb7aa)
+}
